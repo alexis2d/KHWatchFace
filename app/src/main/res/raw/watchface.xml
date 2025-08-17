@@ -1,10 +1,5 @@
 <WatchFace width="450" height="450">
     <Scene>
-        <DigitalClock x="125" y="75" width="200" height="50">
-            <TimeText x="0" y="0" width="200" height="75" format="hh:mm">
-                <Font family="SYNC_TO_DEVICE" size="70" />
-            </TimeText>
-        </DigitalClock>
 
         <ComplicationSlot
             x="200" y="25"
@@ -78,102 +73,59 @@
             </Complication>
         </ComplicationSlot>
 
-        <Condition>
-            <Expressions>
-                <Expression name="is_weather_available">[WEATHER.IS_AVAILABLE]</Expression>
-            </Expressions>
-            <Compare expression="is_weather_available">
-                <PartText x="300" y="175" width="50" height="50">
-                    <Text align="LEFT">
-                        <Font family="SYNC_TO_DEVICE" size="32">
-                            <Template>Today's weather: %s
-                                <Parameter expression="[WEATHER.CONDITION_NAME]"/>
-                            </Template>
-                        </Font>
-                    </Text>
-                </PartText>
-            </Compare>
-            <Default>
-                <PartText x="300" y="175" width="50" height="50">
-                    <Text align="LEFT">
-                        <Font family="SYNC_TO_DEVICE" size="32">--°</Font>
-                    </Text>
-                </PartText>
-            </Default>
-        </Condition>
+        <DigitalClock x="125" y="75" width="200" height="50">
+            <TimeText x="0" y="0" width="200" height="75" format="hh:mm">
+                <Font family="SYNC_TO_DEVICE" size="70" />
+            </TimeText>
+        </DigitalClock>
 
-        <ComplicationSlot
-            x="300" y="225"
-            width="50" height="50"
-            slotId="2"
-            name="steps_complication" displayName="Steps"
-            supportedTypes="SHORT_TEXT">
+        <Group x="300" y="175" width="100" height="120">
 
-            <DefaultProviderPolicy
-                defaultSystemProvider="STEP_COUNT"
-                defaultSystemProviderType="SHORT_TEXT" />
+            <PartText
+                x="0" y="0"
+                width="100" height="30">
+                <Text align="CENTER">
+                    <Font family="SYNC_TO_DEVICE" size="22">
+                        <Template>%s
+                            <Parameter expression="[DAY_OF_WEEK_S]" />
+                        </Template>
+                    </Font>
+                </Text>
+            </PartText>
 
-            <BoundingOval x="0" y="0" width="50" height="50" outlinePadding="2" />
+            <PartText
+                x="0" y="30"
+                width="100" height="30">
+                <Text align="CENTER">
+                    <Font family="SYNC_TO_DEVICE" size="28">
+                        <Template>%s
+                            <Parameter expression="[DAY_Z]" />
+                        </Template>
+                    </Font>
+                </Text>
+            </PartText>
 
-            <Complication type="SHORT_TEXT">
-                <Condition>
-                    <Expression name="hasSteps"><![CDATA[[COMPLICATION.SHORT_TEXT] != null]]></Expression>
+            <PartText
+                x="0" y="60"
+                width="100" height="30">
+                <Text align="CENTER">
+                    <Font family="SYNC_TO_DEVICE" size="22">--</Font>
+                </Text>
+            </PartText>
 
-                    <Compare expression="hasSteps">
-                        <PartText x="0" y="0" width="50" height="50">
-                            <Text align="LEFT">
-                                <Font family="SYNC_TO_DEVICE" size="32">[COMPLICATION.SHORT_TEXT]</Font>
-                            </Text>
-                        </PartText>
-                    </Compare>
+            <PartText
+                x="0" y="90"
+                width="100" height="30">
+                <Text align="CENTER">
+                    <Font family="SYNC_TO_DEVICE" size="28">
+                        <Template>%s
+                            <Parameter expression="[MONTH_Z]" />
+                        </Template>
+                    </Font>
+                </Text>
+            </PartText>
 
-                    <Default>
-                        <PartText x="0" y="0" width="50" height="50">
-                            <Text align="LEFT">
-                                <Font family="SYNC_TO_DEVICE" size="32">--</Font>
-                            </Text>
-                        </PartText>
-                    </Default>
-                </Condition>
-            </Complication>
-        </ComplicationSlot>
-
-        <ComplicationSlot
-            x="300" y="275"
-            width="50" height="50"
-            slotId="2"
-            name="heart_rate_complication" displayName="Heart Rate"
-            supportedTypes="SHORT_TEXT">
-
-            <DefaultProviderPolicy
-                defaultSystemProvider="HEART_RATE"
-                defaultSystemProviderType="SHORT_TEXT" />
-
-            <BoundingOval x="0" y="0" width="50" height="50" outlinePadding="2" />
-
-            <Complication type="SHORT_TEXT">
-                <Condition>
-                    <Expression name="hasHeartRate"><![CDATA[[COMPLICATION.SHORT_TEXT] != null]]></Expression>
-
-                    <Compare expression="hasHeartRate">
-                        <PartText x="0" y="0" width="50" height="50">
-                            <Text align="LEFT">
-                                <Font family="SYNC_TO_DEVICE" size="32">[COMPLICATION.SHORT_TEXT]</Font>
-                            </Text>
-                        </PartText>
-                    </Compare>
-
-                    <Default>
-                        <PartText x="0" y="0" width="50" height="50">
-                            <Text align="LEFT">
-                                <Font family="SYNC_TO_DEVICE" size="32">--</Font>
-                            </Text>
-                        </PartText>
-                    </Default>
-                </Condition>
-            </Complication>
-        </ComplicationSlot>
-
+        </Group>
 
     </Scene>
 </WatchFace>
