@@ -2,8 +2,8 @@
     <Scene>
 
         <ComplicationSlot
-            x="200" y="25"
-            width="50" height="50"
+            x="175" y="5"
+            width="100" height="100"
             slotId="1"
             name="right_complication" displayName="Right"
             supportedTypes="MONOCHROMATIC_IMAGE">
@@ -14,29 +14,12 @@
                 defaultSystemProvider="WATCH_BATTERY"
                 defaultSystemProviderType="MONOCHROMATIC_IMAGE" />
 
-            <BoundingOval x="0" y="0" width="50" height="50" outlinePadding="2" />
+            <BoundingOval x="0" y="0" width="100" height="100" outlinePadding="2" />
 
             <Complication type="MONOCHROMATIC_IMAGE">
-                <Group name="monochromatic_oval" x="0" y="0" width="50" height="50">
-
-                    <!-- Cercle AMBIENT -->
-                    <PartDraw x="0" y="0" width="50" height="50" alpha="0">
-                        <Variant mode="AMBIENT" target="alpha" value="255" />
-                        <Arc direction="CLOCKWISE" startAngle="0" endAngle="360"
-                            centerX="25" centerY="25" width="46" height="46">
-                            <Stroke color="[CONFIGURATION.themeColor.1]" cap="ROUND" thickness="2" />
-                        </Arc>
-                    </PartDraw>
-
-                    <!-- Cercle NORMAL -->
-                    <PartDraw x="0" y="0" width="50" height="50" alpha="255">
-                        <Variant mode="AMBIENT" target="alpha" value="0" />
-                        <Arc direction="CLOCKWISE" startAngle="0" endAngle="360"
-                            centerX="25" centerY="25" width="46" height="46">
-                            <Stroke color="[CONFIGURATION.themeColor.2]" cap="ROUND" thickness="2" />
-                        </Arc>
-                    </PartDraw>
-                </Group>
+                <PartImage x="12" y="17" width="75" height="75">
+                    <Image resource="heart"/>
+                </PartImage>
 
                 <Condition>
                     <Expressions>
@@ -49,22 +32,22 @@
                     </Expressions>
 
                     <Compare expression="monochromatic_ambientImage">
-                        <PartImage x="13" y="13" width="24" height="24" tintColor="[CONFIGURATION.themeColor.1]" alpha="0">
+                        <PartImage x="37" y="40" width="24" height="24" tintColor="[CONFIGURATION.themeColor.1]" alpha="0">
                             <Variant mode="AMBIENT" target="alpha" value="255" />
                             <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE_AMBIENT]" />
                         </PartImage>
-                        <PartImage x="13" y="13" width="24" height="24" tintColor="[CONFIGURATION.themeColor.2]" alpha="255">
+                        <PartImage x="37" y="40" width="24" height="24" tintColor="[CONFIGURATION.themeColor.2]" alpha="255">
                             <Variant mode="AMBIENT" target="alpha" value="0" />
                             <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
                         </PartImage>
                     </Compare>
 
                     <Compare expression="monochromatic_noAmbientImage">
-                        <PartImage x="13" y="13" width="24" height="24" tintColor="[CONFIGURATION.themeColor.1]" alpha="0">
+                        <PartImage x="37" y="40" width="24" height="24" tintColor="[CONFIGURATION.themeColor.1]" alpha="0">
                             <Variant mode="AMBIENT" target="alpha" value="255" />
                             <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
                         </PartImage>
-                        <PartImage x="13" y="13" width="24" height="24" tintColor="[CONFIGURATION.themeColor.2]" alpha="255">
+                        <PartImage x="37" y="40" width="24" height="24" tintColor="[CONFIGURATION.themeColor.2]" alpha="255">
                             <Variant mode="AMBIENT" target="alpha" value="0" />
                             <Image resource="[COMPLICATION.MONOCHROMATIC_IMAGE]" />
                         </PartImage>
