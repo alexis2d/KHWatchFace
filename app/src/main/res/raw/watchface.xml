@@ -136,18 +136,25 @@
 
         </Group>
 
-        <PartText
-            x="275" y="325"
-            width="100" height="30">
-            <Text align="CENTER">
-                <Font family="kh" size="35">
-                    <Template>%s / %s
-                        <Parameter expression="[STEP_COUNT]" />
-                        <Parameter expression="[STEP_GOAL]" />
-                    </Template>
-                </Font>
-            </Text>
-        </PartText>
+        <Group x="260" y="325" width="100" height="30">
+
+            <PartImage x="10" y="0" width="25" height="25">
+                <Image resource="shoe" />
+            </PartImage>
+
+            <PartText
+                x="40" y="0"
+                width="100" height="30">
+                <Text align="LEFT">
+                    <Font family="kh" size="35">
+                        <Template>%s
+                            <Parameter expression="[STEP_COUNT]" />
+                        </Template>
+                    </Font>
+                </Text>
+            </PartText>
+
+        </Group>
 
         <PartImage x="15" y="200" width="250" height="350">
             <Image resource="sora"/>
