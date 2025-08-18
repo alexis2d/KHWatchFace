@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.khwatchface"
+    namespace = "com.watchface.khwatchface"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.khwatchface"
+        applicationId = "com.watchface.khwatchface"
         minSdk = 34
         targetSdk = 36
         versionCode = 1
