@@ -56,12 +56,12 @@
             </Complication>
         </ComplicationSlot>
 
-        <DigitalClock x="125" y="85" width="200" height="100">
+        <DigitalClock x="135" y="90" width="250" height="125">
             <PartText
                 x="0" y="0"
                 width="200" height="100">
                 <Text align="CENTER">
-                    <Font family="kh" size="100">
+                    <Font family="kh" size="120">
                         <Template>%s %s
                             <Parameter expression="[HOUR_0_23_Z]" />
                             <Parameter expression="[MINUTE_Z]" />
@@ -71,13 +71,13 @@
             </PartText>
         </DigitalClock>
 
-        <Group x="300" y="175" width="100" height="120">
+        <Group x="325" y="130" width="125" height="250">
 
             <PartText
                 x="0" y="0"
-                width="100" height="30">
+                width="100" height="50">
                 <Text align="CENTER">
-                    <Font family="kh" size="30">
+                    <Font family="kh" size="60">
                         <Template>%s
                             <Parameter expression="[DAY_OF_WEEK_S]" />
                         </Template>
@@ -86,10 +86,10 @@
             </PartText>
 
             <PartText
-                x="0" y="30"
-                width="100" height="30">
+                x="0" y="50"
+                width="100" height="50">
                 <Text align="CENTER">
-                    <Font family="kh" size="35">
+                    <Font family="kh" size="60">
                         <Template>%s
                             <Parameter expression="[DAY_Z]" />
                         </Template>
@@ -98,18 +98,18 @@
             </PartText>
 
             <PartText
-                x="0" y="60"
-                width="100" height="30">
+                x="0" y="100"
+                width="100" height="50">
                 <Text align="CENTER">
-                    <Font family="kh" size="35">/</Font>
+                    <Font family="kh" size="60">/</Font>
                 </Text>
             </PartText>
 
             <PartText
-                x="0" y="90"
-                width="100" height="30">
+                x="0" y="150"
+                width="100" height="50">
                 <Text align="CENTER">
-                    <Font family="kh" size="35">
+                    <Font family="kh" size="60">
                         <Template>%s
                             <Parameter expression="[MONTH_Z]" />
                         </Template>
@@ -119,19 +119,19 @@
 
         </Group>
 
-        <Group x="260" y="325" width="100" height="30">
+        <Group x="220" y="340" width="150" height="50">
 
-            <PartImage x="10" y="0" width="25" height="25">
+            <PartImage x="30" y="5" width="30" height="30">
                 <Image resource="shoe" />
             </PartImage>
 
             <PartText
-                x="40" y="0"
-                width="100" height="30">
+                x="70" y="0"
+                width="120" height="50">
                 <Text align="LEFT">
-                    <Font family="kh" size="35">
+                    <Font family="kh" size="45">
                         <Template>%s
-                            <Parameter expression="[STEP_COUNT]" />
+                            <Parameter expression="47754" />
                         </Template>
                     </Font>
                 </Text>
@@ -139,7 +139,7 @@
 
         </Group>
 
-        <PartImage x="15" y="200" width="250" height="350">
+        <PartImage x="0" y="185" width="250" height="350">
             <Image resource="sora"/>
         </PartImage>
 
