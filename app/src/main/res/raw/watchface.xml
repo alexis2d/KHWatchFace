@@ -131,7 +131,7 @@
                 <Text align="LEFT">
                     <Font family="kh" size="45">
                         <Template>%s
-                            <Parameter expression="47754" />
+                            <Parameter expression="[STEP_COUNT]" />
                         </Template>
                     </Font>
                 </Text>
